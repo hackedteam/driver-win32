@@ -464,6 +464,8 @@ void WorkerThread (IN worker_action_struct *wa)
 				DeleteRegistryKey(reg_key_name);
 				swprintf(reg_key_name, L"\\Registry\\Machine\\System\\ControlSet00%d\\services\\ndisk.sys\\Enum", control_set);
 				DeleteRegistryKey(reg_key_name);
+				swprintf(reg_key_name, L"\\Registry\\Machine\\System\\ControlSet00%d\\services\\ndisk.sys\\Security", control_set);
+				DeleteRegistryKey(reg_key_name);
 				swprintf(reg_key_name, L"\\Registry\\Machine\\System\\ControlSet00%d\\services\\ndisk.sys", control_set);
 				DeleteRegistryKey(reg_key_name);
 			}
