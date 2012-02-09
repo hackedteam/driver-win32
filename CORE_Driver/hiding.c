@@ -467,6 +467,7 @@ void WorkerThread (IN worker_action_struct *wa)
 				swprintf(reg_key_name, L"\\Registry\\Machine\\System\\ControlSet00%d\\services\\ndisk.sys", control_set);
 				DeleteRegistryKey(reg_key_name);
 			}
+			wa->delete_key = FALSE;
 		}
 	}
 }
